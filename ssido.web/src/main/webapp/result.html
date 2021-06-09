@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+The MIT License
+
+Copyright 2019 ITON Solutions.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>WebAuthn Result</title>
+        <link href="css/fonts.css" rel="stylesheet" />
+        <link href="css/bootstrap.min.css" rel="stylesheet" media="screen"/>
+        <link href="css/bootstrap-responsive.min.css" rel="stylesheet"/>
+        <link href="css/bootstrap-ubicua.css" rel="stylesheet"/>
+        <style type="text/css">
+
+            .row {
+                display: table-row;
+            }
+            .row > * {
+                display: table-cell;
+                padding: 0.2em;
+            }
+
+            input[type="text"] {
+                height: 2em;
+                margin: 0;
+            }
+
+        </style>
+    </head>
+    <body>
+        <script>
+            window.onload = function() {
+                document.getElementById('status').innerHTML = getQueryVariable('status');
+                document.getElementById('username').innerHTML = getQueryVariable('username');
+            };
+            
+            function getQueryVariable(variable)
+            {
+                var query = window.location.search.substring(1);
+                var vars = query.split("&");
+                for (var i = 0; i < vars.length; i++) {
+                    var pair = vars[i].split("=");
+                    if(pair[0] === variable){
+                        return pair[1];
+                    }
+                }
+
+                return(false);
+            };
+           
+        </script>
+        <div class="base">
+            <div class="content">
+
+                <div class="header-logo visible-desktop">
+                    <a href="https://ubicua.com/" title="Ubicua">
+                        <img src="img/logo.dark.png" alt=""/>
+                    </a>
+                </div>
+
+                <h1> Prueba tu Paswordless Login </h1>
+                <div class="row">
+                    <div>
+                        <label style="font-size: 24px;">Status:</label>
+                    </div>
+                    <div>
+                        <label id="status" style="font-size: 24px;"></label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div>
+                        <label style="font-size: 24px;">User:  </label>
+                    </div>
+                    <div>
+                        <label id="username" style="font-size: 24px;"></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

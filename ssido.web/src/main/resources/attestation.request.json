@@ -1,0 +1,15 @@
+{
+    "requestId": "WGH0YB1qkIAy_bB6UEyFvGM_ocQahdxRii0LIM9Nck0",
+    "publicKeyCredentialRequestOptions": {
+        "challenge": "LZYrVkPB_7QDuIk6d12HSZgCTNWhLv2A7Ix2VDw1mRQ",
+        "timeout": null,
+        "rpId": "ubicua.com",
+        "allowCredentials": [{
+                "type": "public-key",
+                "id": "did:example:123456789abcdefghi",
+                "transports": ["wss"]
+            }],
+        "userVerification": "preferred"
+    },
+    "username": "ubicua"
+}
