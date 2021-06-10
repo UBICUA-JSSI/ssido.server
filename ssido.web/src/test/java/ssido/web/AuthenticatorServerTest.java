@@ -160,14 +160,14 @@ public class AuthenticatorServerTest {
            
         byte[] signature = authenticator.getAttestationStatement().getObjectNode().get("sig").binaryValue();
         
-        ObjectNode validatorAssertionResponse = mapper.createObjectNode();
-        validatorAssertionResponse.put("authenticatorData", Base64.getUrlEncoder().withoutPadding().encodeToString(authenticator.getAuthenticatorData().getBytes()));
-        validatorAssertionResponse.put("clientDataJSON", new ByteArray(clientDataString.getBytes()).getBase64());
-        validatorAssertionResponse.put("signature", Base64.getUrlEncoder().withoutPadding().encodeToString(signature)); ///////
+        ObjectNode authenticatorAssertionResponse = mapper.createObjectNode();
+        authenticatorAssertionResponse.put("authenticatorData", Base64.getUrlEncoder().withoutPadding().encodeToString(authenticator.getAuthenticatorData().getBytes()));
+        authenticatorAssertionResponse.put("clientDataJSON", new ByteArray(clientDataString.getBytes()).getBase64());
+        authenticatorAssertionResponse.put("signature", Base64.getUrlEncoder().withoutPadding().encodeToString(signature));
         
         ObjectNode publicKeyCredential = mapper.createObjectNode();
         publicKeyCredential.put("id", "iOOGPqcfeovZAXe2RSiCKUXKS5peMlPDfk7ib7Q1JfQ");
-        publicKeyCredential.set("response", validatorAssertionResponse);
+        publicKeyCredential.set("response", authenticatorAssertionResponse);
         publicKeyCredential.set("clientExtensionResults", mapper.createObjectNode());
         publicKeyCredential.put("type", "public-key");
         
