@@ -168,7 +168,7 @@ public class AuthenticatorServerTest {
         ObjectNode publicKeyCredential = mapper.createObjectNode();
         publicKeyCredential.put("id", "iOOGPqcfeovZAXe2RSiCKUXKS5peMlPDfk7ib7Q1JfQ");
         publicKeyCredential.set("response", authenticatorAssertionResponse);
-        publicKeyCredential.set("clientExtensionResults", mapper.createObjectNode());
+        publicKeyCredential.set("clientExtensionResults", mapper.createObjectNode()); 
         publicKeyCredential.put("type", "public-key");
         
         LOG.debug(String.format("PublicKeyCredential: %s", mapper.writeValueAsString(publicKeyCredential)));
