@@ -8,8 +8,8 @@ The SSIDO server is a server-side web application developed on the basis of the 
 - Wildfly 21+
 
 ## Dependencies
-- [JSSI Resolver Server]
-- [JSSI Registrar Server (optionally)]
+- [JSSI Resolver Server](https://github.com/UBICUA-JSSI/jssi.resolver)
+- [JSSI Registrar Server (optionally)](https://github.com/UBICUA-JSSI/jssi.registrar)
 
 ## Configuration
 The ssido.web coniguration directory is specified in <install_dir>/ssido.server/ssido.web/src/main/resources/ssido.properties.
