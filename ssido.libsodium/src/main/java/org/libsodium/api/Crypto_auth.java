@@ -24,7 +24,7 @@ import org.libsodium.jni.SodiumException;
 
 /**
  *
- * @author ITON Solutions
+ * @author UBICUA
  */
 public class Crypto_auth extends Crypto{
 
