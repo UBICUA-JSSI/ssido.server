@@ -27,7 +27,7 @@ import org.libsodium.jni.SodiumException;
 
 /**
  *
- * @author ITON Solutions
+ * @author UBICUA
  */
 public class Crypto_aead_chacha20poly1305 extends Crypto {
     
