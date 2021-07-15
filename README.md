@@ -36,7 +36,8 @@ In the <install_dir>/ssido.server/ssido.web/src/main/resources/logback.xml file,
     </encoder>
 </appender>
 ```
-
+## About
+![logo](https://github.com/UBICUA-JSSI/ssido.client/blob/main/logo-ngi-essiflab.png) Done within the frame of the NGI eSSIF-Lab Project with financial support from the European Commission Horizon 2020 Programme (Grant Agreement N 871932).
 
 
 
